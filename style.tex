@@ -1,0 +1,75 @@
+% debugging commands - invoke with the --mode=debug flag
+\startmode[debug]
+\showframe
+\showgrid
+\showstruts
+\stopmode
+
+% Enable UTF regime
+\enableregime [utf]
+
+% Enable hanging punctuation, less severe style
+\definefontfeature
+  [default]
+  [default]
+  [protrusion=quality,expansion=quality]
+
+\setupalign[hz,hanging]
+
+% Choose a font
+\usetypescript[pagella]
+\setupbodyfont[pagella,12pt]
+\setupbodyfontenvironment[default][em=italic]
+
+% Declare hanging punctuation
+\setupalign[hanging]
+
+% Be tolerant as to paragraph building
+\setuptolerance[verytolerant,stretch]
+
+% Choose a language, and associated hyphenation rules.
+\language [en]
+
+% Typeset verbatim text with sans-serif
+\setuptyping [letter=\ss]
+
+% Specify how much white space between paragraphs
+\setupwhitespace [medium]
+
+% Itemizations are tightly packed
+\setupitemize
+  [1][packed]
+
+% Center the page number in the footer
+\setuppagenumbering
+  [location={footer, center},
+   state=start]
+
+% Set the default paper size to US letter
+\setuppapersize [letter]
+
+% Prevent widows and orphans
+\startsetups[newPenalties]
+  \widowpenalty10000
+  \clubpenalty10000
+\stopsetups
+
+% Layout on the grid please
+\setuplayout
+  [grid=yes,
+   setups={*default,newPenalties}]
+%   header=0pt,
+%   footer=0pt]
+\setuplayout[header=0pt]
+
+% Section heads are set in the margin
+\setupheads [alternative=margin]
+
+% Setup how combinations look
+\setupcombinations
+  [distance=1.25cm] %% horizontal separation
+
+% Setup initial character
+\setupinitial[color=red, font=Roman sa 4, distance=3pt, state=start, n=3]
+
+%finis
