@@ -75,5 +75,17 @@
 % Add kerning to the subject title, and scale up its size a bit.
 \setuphead[subject][style=\scb,textstyle={\kerncharacters[.25]}]
 
+\def\article#1#2{
+  \start
+    \setupwhitespace[small]
+    \switchtobodyfont[24pt]
+    \framed[frame=off,align=left,width=\textwidth]{#1}
+    \switchtobodyfont[12pt]
+    \par
+    \rightaligned{\bf #2}
+  \stop
+  \hairline
+  \blank[2*big]
+}
 
 %finis
