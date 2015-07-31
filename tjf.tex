@@ -1,10 +1,13 @@
 \environment style
 
 \starttext
-  \dorecurse{3}{\input tufte\par}
-  \placeinitial \input tufte
 
-  \page
+  \startsubject[title={Edmund Tufte}]
+    \dorecurse{3}{\input tufte\par}
+    \placeinitial \input tufte
+  \stopsubject
+
+  \vfill
 
               Serif typeface: regular, {\em italic}, {\bf bold} and {\bf\em bold italic} fonts.
 

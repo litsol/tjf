@@ -70,6 +70,10 @@
   [distance=1.25cm] %% horizontal separation
 
 % Setup initial character
-\setupinitial[color=red,  font=Regular sa 5, distance=3pt, state=start, n=3]
+\setupinitial[color=red, font=Regular sa 5, distance=3pt, state=start, n=3]
+
+% Add kerning to the subject title, and scale up its size a bit.
+\setuphead[subject][style=\scb,textstyle={\kerncharacters[.25]}]
+
 
 %finis

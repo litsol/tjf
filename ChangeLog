@@ -1,5 +1,7 @@
 2015-07-31  Michael Guravage  <guravage@weddell.itf.cwi.nl>
 
+	* tjf.tex: Added kerning to the subject title.
+
 	* style.tex: Describe font as 'Roman', default is 'Bold.'  Increase initial magnification to five.
 
 	* tjf.tex: Added font switching examples.
