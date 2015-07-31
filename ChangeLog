@@ -1,0 +1,5 @@
+2015-07-31  Michael Guravage  <guravage@weddell.itf.cwi.nl>
+
+	* style.tex: Describe font as 'Roman', default is 'Bold.'  Increase initial magnification to five.
+
+	* tjf.tex: Added font switching examples.
