@@ -1,0 +1,1 @@
+{"shell_cmd": "context $file_name --mode=debug && open $file_base_name.pdf"}
