@@ -1,10 +1,20 @@
+% include the commands in style.tex as if they were typed here.
 \environment style
 
+% The minimal required markup is the \starttext - \stoptext pair of commands.
 \starttext
+
+  % Dorecurse takes two arguments; the first is a number telling how many times to repeat the second argument. 
+  % Here we input the text found in tufte.tex, ConTeXt knows where the file resides, followed by a paragraph break. 
   \dorecurse{3}{\input tufte\par}
+
+  % Demonstrate drop caps.
   \placeinitial \input tufte
 
+  % Insert a page break. This is exceptional.
   \page
+
+  % These are examples of how to switch to italic, bold and bold italic typeface. 
 
               Serif typeface: regular, {\em italic}, {\bf bold} and {\bf\em bold italic} fonts.
 
@@ -14,3 +24,4 @@
 
 
 \stoptext
+% finis

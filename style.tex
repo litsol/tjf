@@ -5,10 +5,10 @@
 \showstruts
 \stopmode
 
-% Enable UTF regime
+% Enable UTF regime, i.e., you may include, and ConTeXt will typeset, unicode characters.
 \enableregime [utf]
 
-% Enable hanging punctuation, less severe style
+% Enable hanging punctuation, less severe style.
 \definefontfeature
   [default]
   [default]
@@ -16,65 +16,67 @@
 
 \setupalign[hz,hanging]
 
-% Choose a font
-%%\usetypescript[pagella]
+% Choose a font.
 \setupbodyfont[pagella,12pt]
 \setupbodyfontenvironment[default][em=italic]
 
-% Declare hanging punctuation
+% Declare hanging punctuation.
 \setupalign[hanging]
 
-% Be tolerant as to paragraph building
+% Be tolerant while building paragraphs.
 \setuptolerance[verytolerant,stretch]
 
 % Choose a language, and associated hyphenation rules.
 \language [en]
 
-% Typeset verbatim text with sans-serif
+% Typeset verbatim text with sans-serif.
 \setuptyping [letter=\ss]
 
-% Specify how much white space between paragraphs
+% Specify how much white space between paragraphs.
 \setupwhitespace [medium]
 
-% Itemizations are tightly packed
+% Itemizations are tightly packed.
 \setupitemize
   [1][packed]
 
-% Center the page number in the footer
+% Center the page number in the footer.
 \setuppagenumbering
   [location={footer, center},
    state=start]
 
-% Set the default paper size to US letter
+% Set the default paper size to US letter.
 \setuppapersize [letter]
 
-% Prevent widows and orphans
+% Prevent widows and orphans.
 \startsetups[newPenalties]
   \widowpenalty10000
   \clubpenalty10000
 \stopsetups
 
-% Layout on the grid please
+% Layout on the grid please.
 \setuplayout
   [grid=yes,
    setups={*default,newPenalties}]
 %   header=0pt,
 %   footer=0pt]
+
+% Obviate the header by reducing its space to zero. 
 \setuplayout[header=0pt]
 
-% Section heads are set in the margin
+% Put section numbers in the margin.
 \setupheads [alternative=margin]
 
-% Setup how combinations look
+% Setup how combinations look.
 \setupcombinations
   [distance=1.25cm] %% horizontal separation
 
-% Setup initial character
+% Setup initial, i.e., drop cap, character.
 \setupinitial[color=red, font=Regular sa 5, distance=3pt, state=start, n=3]
 
 % Add kerning to the subject title, and scale up its size a bit.
 \setuphead[subject][style=\scb,textstyle={\kerncharacters[.25]}]
 
+% Example article macro. Only typeset the article title and author. 
 \def\article#1#2{
   \start
     \setupwhitespace[small]

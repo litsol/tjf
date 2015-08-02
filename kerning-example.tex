@@ -1,13 +1,24 @@
+% include the commands in style.tex as if they were typed here.
 \environment style
 
+% The minimal required markup is the \starttext - \stoptext pair of commands.
 \starttext
 
+  % The \startsubject - \stopsubject command pair replaced the \subject command. 
+  % The kerning of the title text is specified in style.tex.
   \startsubject[title={Edmund Tufte}]
+    % Dorecurse takes two arguments; the first is a number telling how many times to repeat the second argument. 
+    % Here we input the text found in tufte.tex, ConTeXt knows where the file resides, followed by a paragraph break. 
     \dorecurse{3}{\input tufte\par}
-    \placeinitial \input tufte
-  \stopsubject
 
+  % Demonstrate drop caps.
+  \placeinitial \input tufte
+  \stopsubject
+  
+  % Insert enough vertical space so that what followes is at the bottom of the page.
   \vfill
+
+  % These are examples of how to switch to italic, bold and bold italic typeface. 
 
               Serif typeface: regular, {\em italic}, {\bf bold} and {\bf\em bold italic} fonts.
 
@@ -17,3 +28,4 @@
 
 
 \stoptext
+% finis
